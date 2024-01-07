@@ -7,7 +7,7 @@ const theme = createTheme({
       'sans-serif', // Fallback font
     ].join(','),
     h1: {
-      fontWeight: 700,
+      fontWeight: 900,
       fontSize: '3rem', // Default
       '@media (max-width:600px)': {
         fontSize: '1.5rem', // Small screens
@@ -20,6 +20,19 @@ const theme = createTheme({
       },
       '@media (min-width:1200px)': {
         fontSize: '4rem', // Extra large screens
+      },
+    },
+    h2: {
+      fontWeight: 700,
+      fontSize: '2.5rem', // Large screens (1280px)
+      '@media (max-width:600px)': {
+        fontSize: '1.17rem', // Extra Small screens (less than 600px)
+      },
+      '@media (min-width:600px)': {
+        fontSize: '1.76rem', // Medium screens (900px)
+      },
+      '@media (min-width:900px)': {
+        fontSize: '2.5rem', // Large screens (1200px and above)
       },
     },
     h5: {
