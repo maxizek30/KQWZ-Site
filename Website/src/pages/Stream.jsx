@@ -1,11 +1,12 @@
 import { Box, Container, Grid, Typography } from "@mui/material"
-import HeroImage from '../assets/backgroundImage.jpg';
+import HeadphoneImage from '../assets/headphones.jpg';
 
 function Stream() {
   return (
     <>
+      {/* Header Section */}
       <Box sx={{
-        backgroundImage: `url(${HeroImage})`,
+        backgroundImage: `url(${HeadphoneImage})`,
         backgroundSize: 'cover',
         backgroundPosition: 'center',
         height: "40vh",
@@ -13,20 +14,20 @@ function Stream() {
         display: 'flex', // Use flexbox
         alignItems: 'center', // Center vertically
         justifyContent: 'center', // Center horizontally
-      }}
-    >
-      <Container>
-      <Grid container spacing={2}>
-          <Grid item xs={12} sm={8} md={6} sx={{display: "flex", flexDirection: "column", gap: 1}}>
-            <Typography variant="h1" gutterBottom color="white">
-              Listen!
-            </Typography>
-            <Typography variant="h5" color="white">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua
-            </Typography>
+        }}
+      >
+        <Container>
+          <Grid container spacing={2}>
+            <Grid item xs={12} sm={8} md={6} sx={{display: "flex", flexDirection: "column", gap: 1}}>
+              <Typography variant="h1" gutterBottom color="white">
+                Listen!
+              </Typography>
+              <Typography variant="h5" color="white">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua
+              </Typography>
+            </Grid>
           </Grid>
-        </Grid>
-      </Container>
+        </Container>
       </Box>
     </>
   )

@@ -1,13 +1,14 @@
 import { Grid, Typography, Button, Box, Container } from "@mui/material";
-import HeroImage from '../assets/backgroundImage.jpg';
 import buildingImage from '../assets/buildingImage.png'
+import MicImage from '../assets/microphone.jpg'
 
 function Home() {
   return (
     <>
+    {/* Hero Section */}
     <Box
       sx={{
-        backgroundImage: `url(${HeroImage})`,
+        backgroundImage: `url(${MicImage})`,
         backgroundSize: 'cover',
         backgroundPosition: 'center',
         height: '80vh', // Full viewport height
@@ -38,20 +39,22 @@ function Home() {
         </Grid>
       </Container>
     </Box>
+    {/* Who We Are Section */}
     <Container>
-    <Box sx={{ 
-          display: "flex", 
-          flexDirection: "column",
-          justifyContent: "center", 
-          alignItems: "center", 
-          textAlign: "center", 
-          gap: 2,
-          py: 12
-        }}>
+      <Box sx={{ 
+        display: "flex", 
+        flexDirection: "column",
+        justifyContent: "center", 
+        alignItems: "center", 
+        textAlign: "center", 
+        gap: 2,
+        py: 12
+        }}
+      >
         <Typography variant="h2">Who We Are</Typography>
         <Typography variant="h5">The bulk of all patents are crap. Spending time reading them is stupid. It's up to the patent owner to do so, and to enforce them. (Linus Torvalds) Java is, in many ways, C++–. (Michael Feldman) If debugging is the process of removing bugs, then programming must be the process of putting them in. (Edsger W. Dijkstra) I think there's a world market for about 5 computers. (Thomas J. Watson, Chairman of the Board, IBM, circa 1948)</Typography>
         <Button variant="contained" color="secondary" size="large">
-                Learn More
+          Learn More
         </Button>
       </Box>
     </Container>

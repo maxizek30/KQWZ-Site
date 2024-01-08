@@ -1,5 +1,4 @@
 import { Box, Container, Grid, Typography } from "@mui/material"
-import HeroImage from '../assets/backgroundImage.jpg';
 import buildingImage from '../assets/buildingImage.png'
 import Logo from '../assets/HighlineHeritageLogo.png'
 import Map from '../assets/map.png'
@@ -9,7 +8,7 @@ function About() {
     <>
       {/* Header Section */}
       <Box sx={{
-          backgroundImage: `url(${HeroImage})`,
+          backgroundColor: 'grey',
           backgroundSize: 'cover',
           backgroundPosition: 'center',
           height: "40vh",
