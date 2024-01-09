@@ -1,5 +1,6 @@
 import { Box, Container, Grid, Typography } from "@mui/material"
 import HeadphoneImage from '../assets/headphones.jpg';
+import RadioPlayer from "../components/RadioPlayer";
 
 function Stream() {
   return (
@@ -28,6 +29,14 @@ function Stream() {
             </Grid>
           </Grid>
         </Container>
+      </Box>
+      {/* Radio Player Section */}
+      <Box sx={{
+        bgcolor: "primary.main",
+        py: 6
+        }}
+      >
+        <RadioPlayer />  
       </Box>
     </>
   )

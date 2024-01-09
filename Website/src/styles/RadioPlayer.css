@@ -1,0 +1,142 @@
+ /* For mobile phones: */
+ .radioContainer {
+    width: 90%;
+    height: 400px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+}
+.handle {
+    display: flex;
+    height: 64px;
+    width: 60%;
+    display: flex;
+    justify-content: center;
+}
+.handleCushion {
+    height: 32px;
+    background-color: #72BD46;
+    width: 50%;
+    border-radius: 12px;
+}
+.handleBarLeft {
+    align-self: flex-end;
+    width: 12.5%;
+    height: 44px;
+    border-left: 12px solid white;
+    border-top: 12px solid white;
+    border-top-left-radius: 12px;
+}
+.handleBarRight {
+    align-self: flex-end;
+    width: 12.5%;
+    height: 44px;
+    border-right: 12px solid white;
+    border-top: 12px solid white;
+    border-top-right-radius: 12px;
+}
+.radio {
+    background-color: #F4C82B;
+    width: 100%;
+    height: 160px;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+}
+.radioTopSection {
+    display: flex;
+    flex-grow: 1;
+    justify-content: space-around;
+    padding: 8px;
+}
+.radioBottomSection {
+    display: flex;
+    flex-grow: 2;
+    justify-content: space-around;
+    align-items: center;
+    padding-bottom: 8px;
+}
+
+.radioButtonSmall {
+    background-color: #201519;
+    border-radius: 50%;
+    height: 20px;
+    width: 20px;
+    align-self: flex-end;
+}
+.radioButtonBig {
+    background-color: #201519;
+    border-radius: 50%;
+    height: 32px;
+    width: 32px;
+}
+.volumeSlider {
+    background-color: #FAE5E0;
+    width: 50%;
+    height: 20px;
+    align-self: flex-end;
+}
+.discPlayer {
+    background-color: #201519;
+    height: 84px;
+    width: 84px;
+    border-radius: 50%;
+    border: solid 8px #ED2027;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.disc {
+    background-color: #201519;
+    height: 12px;
+    width: 12px;
+    border-radius: 50%;
+    border: solid 14px white;
+}
+.playButtonContainer {
+    background-color: #201519;
+    width: 64px;
+    height: 64px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.playButtonLeft {
+    position: absolute;
+    transition: clip-path .3s ease;
+    width: 50px;
+    height: 50px;
+    background-color: white;
+    clip-path: polygon(0 0, 50% 25%, 50% 75%, 0% 100%);
+}
+.playButtonRight {
+    position: absolute;
+    transition: clip-path .3s ease;
+    width: 50px;
+    height: 50px;
+    background-color: white;
+    clip-path: polygon(50% 25%, 100% 50%, 100% 50%, 50% 75%);
+}
+
+.playButtonRight.active {
+    clip-path: polygon(70% 0, 100% 0, 100% 100%, 70% 100%);     
+}
+.playButtonLeft.active {
+    clip-path: polygon(0 0, 30% 0, 30% 100%, 0% 100%);
+}
+.musicNotes {
+    font-size: 100px;
+    display: none;
+    transform: rotate(-12deg);
+    gap: 24px;
+}
+.doubleNote {
+    transform: rotate(12deg);
+}
+
+@media only screen and (min-width: 520px) {
+    .radioContainer {
+        width: 20%;
+    }
+}
