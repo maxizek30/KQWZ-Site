@@ -1,6 +1,7 @@
 import { Grid, Typography, Button, Box, Container } from "@mui/material";
-import buildingImage from '../assets/buildingImage.png'
 import MicImage from '../assets/microphone.jpg'
+import OnAirImage from '../assets/OnAir.png'
+import ContactUsImage from '../assets/ContactUs.jpg'
 
 function Home() {
   return (
@@ -25,13 +26,13 @@ function Home() {
               A low Power signal that magnifies the voices in the community
             </Typography>
             <Typography variant="h5" color="white">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua
+              Bringing South King County's diverse voices to the forefront, our low power signal is a beacon of community connection and cultural richness.
             </Typography>
             <Box display="flex" gap={2}>
-              <Button variant="contained" color="inherit" size="large">
+              <Button href="/about" variant="contained" color="inherit" size="large">
                 Learn More
               </Button>
-              <Button variant="contained" color="tertiary" size="large" sx={{ color: "black" }}>
+              <Button href= "/stream" variant="contained" color="tertiary" size="large">
                 Listen!
               </Button>
             </Box>
@@ -40,46 +41,69 @@ function Home() {
       </Container>
     </Box>
     {/* Who We Are Section */}
-    <Container>
-      <Box sx={{ 
-        display: "flex", 
-        flexDirection: "column",
-        justifyContent: "center", 
-        alignItems: "center", 
-        textAlign: "center", 
-        gap: 2,
-        py: 12
-        }}
-      >
-        <Typography variant="h2">Who We Are</Typography>
-        <Typography variant="h5">The bulk of all patents are crap. Spending time reading them is stupid. It's up to the patent owner to do so, and to enforce them. (Linus Torvalds) Java is, in many ways, C++–. (Michael Feldman) If debugging is the process of removing bugs, then programming must be the process of putting them in. (Edsger W. Dijkstra) I think there's a world market for about 5 computers. (Thomas J. Watson, Chairman of the Board, IBM, circa 1948)</Typography>
-        <Button variant="contained" color="secondary" size="large">
-          Learn More
-        </Button>
-      </Box>
-    </Container>
-    <Box sx={{width: "100%", bgcolor: "tertiary.main"}}>
+    <Box 
+      sx={{
+      width: "100%", 
+      bgcolor: "white",
+      }}
+    >
       <Container>
         <Grid container
-        direction="row"
-        gap={2}
-        justifyContent="space-between"
+          py={{ xs: 2, sm: 4, md: 10, lg: 24 }}
+          direction={"row-reverse"}
+          sx={{
+            justifyContent: "space-between",
+            gap: 2
+          }}
         >
-          <Grid item xs={12} s={10} md={7}
+          <Grid item xs={12} s={10} md={4}
             sx={{
             display: 'flex',
             flexDirection: 'column',
             alignItems: "flex-start",
-            gap: 2,
+            gap: 4,
             justifyContent: "center",
-            py: 6
+          }}>
+            <Typography variant="h2" color="black">Who We Are</Typography>
+            <Typography variant="h5" color="black">The purpose of lorem ipsum is to create a natural looking block of text (sentence, paragraph, page, etc.) that doesn't distract from the layout. A practice not without controversy, laying out pages with meaningless filler text can be very useful when the focus is meant to be on design, not content.</Typography>
+            <Button href="/about" variant="contained" color="secondary" size="large">Learn More</Button>
+          </Grid>
+          <Grid item xs={12} s={10} md={7}>
+            <img src={OnAirImage} alt="Description" style={{ width: '100%' }} />
+          </Grid>
+        </Grid>
+      </Container>
+    </Box>
+    {/* Contact Us Section */}
+    <Box 
+        sx={{
+        width: "100%", 
+        bgcolor: "tertiary.main",
+      }}
+    >
+      <Container>
+        <Grid container
+        py={{ xs: 2, sm: 4, md: 10, lg: 24 }}
+        sx={{
+          justifyContent: "space-between",
+          direction: "row",
+          gap: 2
+          }}
+        >
+          <Grid item xs={12} s={10} md={4}
+            sx={{
+            display: 'flex',
+            flexDirection: 'column',
+            alignItems: "flex-start",
+            gap: 4,
+            justifyContent: "center",
           }}>
             <Typography variant="h2" color="white">Contact Us!</Typography>
             <Typography variant="h5" color="white">The purpose of lorem ipsum is to create a natural looking block of text (sentence, paragraph, page, etc.) that doesn't distract from the layout. A practice not without controversy, laying out pages with meaningless filler text can be very useful when the focus is meant to be on design, not content.</Typography>
-            <Button variant="contained" color="secondary" size="large">Contact Us!</Button>
+            <Button href="/contact" variant="contained" color="secondary" size="large">Contact Us!</Button>
           </Grid>
-          <Grid item xs={12} s={10} md={4}>
-            <img src={buildingImage} alt="Description" style={{ width: '100%', height: '100%' }} />
+          <Grid item xs={12} s={10} md={7}>
+            <img src={ContactUsImage} alt="Description" style={{ width: '100%', height: '100%' }} />
           </Grid>
         </Grid>
       </Container>

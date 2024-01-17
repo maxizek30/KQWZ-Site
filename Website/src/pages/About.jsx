@@ -1,7 +1,7 @@
-import { Box, Container, Grid, Typography } from "@mui/material"
-import buildingImage from '../assets/buildingImage.png'
+import { Box, Container, Grid, Paper, Typography } from "@mui/material"
 import Logo from '../assets/HighlineHeritageLogo.png'
 import Map from '../assets/map.png'
+import StudioImage from "../assets/StudioImage.jpg"
 
 function About() {
   return (
@@ -37,14 +37,12 @@ function About() {
       >
         <Container>
           <Grid container
+          py={{ xs: 2, sm: 4, md: 10, lg: 24 }}
           direction="row"
           gap={2}
           justifyContent="space-between"
-          sx={{
-            py: 4
-          }}
           >
-            <Grid item xs={12} s={10} md={7}
+            <Grid item xs={12} s={10} md={4}
               sx={{
               display: 'flex',
               flexDirection: 'column',
@@ -58,8 +56,8 @@ function About() {
                 OneAmerica Radio, through KQWZ, addresses the specific needs of these communities by providing culturally relevant and in-language programming. We understand that the pulse of South King County lies in its diversity and cultural richness, which is why our content is tailored to reflect these unique characteristics.
               </Typography>
             </Grid>
-            <Grid item xs={12} s={10} md={4}>
-              <img src={buildingImage} alt="Description" style={{ width: '100%', height: '100%' }} />
+            <Grid item xs={12} s={10} md={7}>
+              <img src={StudioImage} alt="Description" style={{ width: '100%', height: '100%' }} />
             </Grid>
           </Grid>
         </Container>
@@ -70,15 +68,12 @@ function About() {
         direction="row-reverse"
         gap={2}
         justifyContent="space-between"
-        sx={{
-          py: 10
-        }}
+        py={{ xs: 2, sm: 4, md: 10, lg: 20 }}
         >
-          <Grid item xs={12} s={10} md={7}
+          <Grid item xs={12} s={10} md={4}
             sx={{
             display: 'flex',
             flexDirection: 'column',
-            alignItems: "flex-start",
             gap: 2,
             justifyContent: "center",
             }}
@@ -99,8 +94,8 @@ function About() {
               </ul>
             </Typography>
           </Grid>
-          <Grid item xs={12} s={10} md={4}>
-            <img src={Logo} alt="Description" style={{ width: '100%', height: '100%' }} />
+          <Grid item xs={12} s={10} md={7} sx={{ display: "flex", alignItems: "center"}}>
+            <img src={Logo} alt="Description" style={{ width: '100%' }} />
           </Grid>
         </Grid>
       </Container>
@@ -111,20 +106,27 @@ function About() {
         }}
       >
         <Container sx={{
-          py: 6
-          }}
+          py: { xs: 2, sm: 4, md: 10, lg: 24 }
+        }}
         >
-          <Typography variant="h2" color="white">Our Programs</Typography>
-          <Typography variant="h5" color="white">
-            Our programming spans a wide array of topics, including:
-            <ul>
-              <li>Upcoming community events and forums</li>
-              <li>Know Your Rights training sessions</li>
-              <li>Music shows celebrating diverse genres</li>
-              <li>Engaging talk shows</li>
-              <li>And much more - all delivered in various languages to cater to our diverse audience.</li>
-            </ul>
-          </Typography>
+          <Paper
+            elevation={24}
+            sx={{
+            color: "black",
+            padding: 2,
+          }}>
+            <Typography variant="h2">Our Programs</Typography>
+            <Typography variant="h5">
+              Our programming spans a wide array of topics, including:
+              <ul>
+                <li>Upcoming community events and forums</li>
+                <li>Know Your Rights training sessions</li>
+                <li>Music shows celebrating diverse genres</li>
+                <li>Engaging talk shows</li>
+                <li>And much more - all delivered in various languages to cater to our diverse audience.</li>
+              </ul>
+            </Typography>
+          </Paper>
         </Container>
       </Box>
       {/* Commitment */}
@@ -135,14 +137,12 @@ function About() {
       >
         <Container>
           <Grid container
+          py={{ xs: 2, sm: 4, md: 10, lg: 24 }}
           direction="row"
           gap={2}
           justifyContent="space-between"
-          sx={{
-            py: 4
-          }}
           >
-            <Grid item xs={12} s={10} md={7}
+            <Grid item xs={12} s={10} md={4}
               sx={{
               display: 'flex',
               flexDirection: 'column',
@@ -156,7 +156,7 @@ function About() {
                 We are more than a radio station; we are a low power signal that amplifies the voices of our community. We are committed to providing vital information on community services, assisting residents, especially those new to the area or with limited English language skills.
               </Typography>
             </Grid>
-            <Grid item xs={12} s={10} md={4}>
+            <Grid item xs={12} s={10} md={7}>
               <img src={Map} alt="Description" style={{ width: '100%', height: '100%' }} />
             </Grid>
           </Grid>

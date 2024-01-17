@@ -3,7 +3,7 @@ import '../styles/RadioPlayer.css';
 
 function RadioPlayer() {
     const [isPlaying, setIsPlaying] = useState(false);
-    const audioRef = useRef(new Audio("https://us3.internet-radio.com/proxy/maxizek30?mp=/VTRU"));
+    const audioRef = useRef(new Audio("http://kqwz.link:8000/kqwz.opus"));
     const musicNotesRef = useRef(null);
 
     const togglePlay = () => {

@@ -5,17 +5,28 @@ import Contact from './pages/Contact'
 import Stream from './pages/Stream'
 import Navbar from './components/Navbar'
 import theme from './theme'
+import Footer from './components/Footer'
 import { ThemeProvider } from '@emotion/react'
-import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import { BrowserRouter as Router, Route, Routes, useLocation } from "react-router-dom";
 import { Toolbar } from '@mui/material'
+import { useEffect } from 'react'
 
+function ScrollToTop() {
+  const { pathname } = useLocation();
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [pathname]);
+
+  return null;
+}
 
 function App() {
-
   return (
     <>
     <ThemeProvider theme={theme}>
         <Router>
+        <ScrollToTop />
           <Navbar />
           <Toolbar/>
           <Routes>
@@ -24,6 +35,7 @@ function App() {
             <Route path="/about" element={<About />} />
             <Route path="/contact" element={<Contact />} />
           </Routes>
+          <Footer />
         </Router>
       </ThemeProvider>
     </>

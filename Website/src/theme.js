@@ -10,7 +10,7 @@ const theme = createTheme({
       fontWeight: 900,
       fontSize: '3rem', // Default
       '@media (max-width:600px)': {
-        fontSize: '1.5rem', // Small screens
+        fontSize: '2rem', // Small screens
       },
       '@media (min-width:600px)': {
         fontSize: '2.5rem', // Medium screens
@@ -23,16 +23,16 @@ const theme = createTheme({
       },
     },
     h2: {
-      fontWeight: 700,
+      fontWeight: 900,
       fontSize: '2.5rem', // Large screens (1280px)
       '@media (max-width:600px)': {
-        fontSize: '1.17rem', // Extra Small screens (less than 600px)
+        fontSize: '2rem', // Extra Small screens (less than 600px)
       },
       '@media (min-width:600px)': {
-        fontSize: '1.76rem', // Medium screens (900px)
+        fontSize: '2.5rem', // Medium screens (900px)
       },
       '@media (min-width:900px)': {
-        fontSize: '2.5rem', // Large screens (1200px and above)
+        fontSize: '3.7rem', // Large screens (1200px and above)
       },
     },
     h5: {
@@ -53,6 +53,10 @@ const theme = createTheme({
         fontSize: '1.5rem',
       },
       // Add more breakpoints if needed
+    },
+    h6: {
+      fontWeight: 200,
+      fontSize: '1rem',
     },
   },
   palette: {

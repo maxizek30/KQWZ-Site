@@ -1,11 +1,21 @@
-import { AppBar, Box, Button, Toolbar, Divider, List, ListItem, ListItemButton, ListItemText, CssBaseline, IconButton, Drawer} from "@mui/material"
+import { useState } from "react";
+import { AppBar, Box, Button, Toolbar, Divider, List, ListItem, ListItemButton, ListItemText, CssBaseline, IconButton, Drawer, Slide, useScrollTrigger } from "@mui/material";
 import MenuIcon from '@mui/icons-material/Menu';
 import { Link, useLocation} from "react-router-dom"
 import logoUrl from '../assets/logo.jpg'
-import { useState } from "react";
 
+function HideOnScroll(props) {
+  const { children } = props;
+  const trigger = useScrollTrigger();
 
-function Navbar() {
+  return (
+    <Slide appear={false} direction="down" in={!trigger}>
+      {children}
+    </Slide>
+  );
+}
+
+function Navbar() {2
   const links = [
     { path: "/", title: "Home" },
     { path: "/stream", title: "Stream" },
@@ -41,11 +51,12 @@ function Navbar() {
   return (
     <>
      <CssBaseline />
+     <HideOnScroll>
       <AppBar component="nav" sx={{ bgcolor: 'white' }}>
         <Toolbar>
           <Box sx={{ flexGrow: 1}}>
             <Link component={Link} to="/">
-              <img src={logoUrl} alt="Logo" style={{ height: 50 }}/> 
+              <img src={logoUrl} alt="Logo" style={{ height: 80 }}/> 
             </Link>
           </Box>
           <Box sx={{ display: { xs: 'none', sm: 'block' } }}>
@@ -76,6 +87,7 @@ function Navbar() {
           </IconButton>
         </Toolbar>
       </AppBar>
+      </HideOnScroll>
       <Drawer
         anchor="top"
         variant="temporary"
