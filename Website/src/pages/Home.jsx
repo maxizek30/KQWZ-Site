@@ -65,7 +65,7 @@ function Home() {
             justifyContent: "center",
           }}>
             <Typography variant="h2" color="black">Who We Are</Typography>
-            <Typography variant="h5" color="black">The purpose of lorem ipsum is to create a natural looking block of text (sentence, paragraph, page, etc.) that doesn't distract from the layout. A practice not without controversy, laying out pages with meaningless filler text can be very useful when the focus is meant to be on design, not content.</Typography>
+            <Typography variant="h5" color="black">At OneAmerica Voice - KQWZ, we are more than just a radio station; we are a community-driven platform dedicated to giving a voice to the diverse cultures and stories of South King County. Our commitment lies in weaving a tapestry of local narratives and perspectives, fostering understanding and unity through the power of broadcasting.</Typography>
             <Button href="/about" variant="contained" color="secondary" size="large">Learn More</Button>
           </Grid>
           <Grid item xs={12} s={10} md={7}>
@@ -99,7 +99,7 @@ function Home() {
             justifyContent: "center",
           }}>
             <Typography variant="h2" color="white">Contact Us!</Typography>
-            <Typography variant="h5" color="white">The purpose of lorem ipsum is to create a natural looking block of text (sentence, paragraph, page, etc.) that doesn't distract from the layout. A practice not without controversy, laying out pages with meaningless filler text can be very useful when the focus is meant to be on design, not content.</Typography>
+            <Typography variant="h5" color="white">Your voice is crucial to the chorus of our community. Reach out to OneAmerica Voice - KQWZ for inquiries, feedback, or to share your story, and let's make South King County's narrative stronger together.</Typography>
             <Button href="/contact" variant="contained" color="secondary" size="large">Contact Us!</Button>
           </Grid>
           <Grid item xs={12} s={10} md={7}>

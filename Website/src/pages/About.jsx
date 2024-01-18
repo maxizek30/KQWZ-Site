@@ -3,6 +3,8 @@ import Logo from '../assets/HighlineHeritageLogo.png'
 import Map from '../assets/map.png'
 import StudioImage from "../assets/StudioImage.jpg"
 
+
+
 function About() {
   return (
     <>
@@ -23,7 +25,7 @@ function About() {
             <Grid item xs={12} sm={8} md={6} sx={{display: "flex", flexDirection: "column", gap: 1}}>
               <Typography variant="h1" gutterBottom color="white">About Us!</Typography>
               <Typography variant="h5" color="white">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua
+                Discover the story behind OneAmerica Voice - KQWZ, where we turn the spotlight on the diverse voices of South King County, celebrating and strengthening our community through the power of radio.
               </Typography>
             </Grid>
           </Grid>

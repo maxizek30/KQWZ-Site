@@ -23,9 +23,7 @@ function Stream() {
               <Typography variant="h1" gutterBottom color="white">
                 Listen!
               </Typography>
-              <Typography variant="h5" color="white">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua
-              </Typography>
+              <Typography variant="h5" color="white">Tune in to OneAmerica Voice - KQWZ and experience a world of stories, music, and conversations that celebrate our rich cultural tapestry."</Typography>
             </Grid>
           </Grid>
         </Container>
