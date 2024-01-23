@@ -38,7 +38,7 @@ function Footer() {
                         <br/>
                         Seattle, WA, 98144
                         <br/>
-                        <Link href="tel:253-293-1003" color="primary.dark">(253) 293-1003</Link>
+                        <Link href="tel:206-723-2203" color="primary.dark">(206) 723-2203</Link>
                         <br/>
                         <Link href="mailto:test@example.com" color="primary.dark">Chris.KQWZ@weareoneamerica.org</Link>
                         </Typography>

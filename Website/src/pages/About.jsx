@@ -88,7 +88,7 @@ function About() {
                   Celebrating Cultural Heritage: Broadcasting programs that highlight the cultural tapestry of our communities and the significant work of local nonprofits.
                 </li>
                 <li>
-                  Empowering Through Education: Featuring content from local schools and senior centers, offering insightful and educational perspectives.
+                  Empowering Through Education: Featuring content from local schools and other museums, offering insightful and educational perspectives.
                 </li>
                 <li>
                   Fostering Community Engagement: Hosting and covering community forums and events that encourage dialogue and collective action for a better future.

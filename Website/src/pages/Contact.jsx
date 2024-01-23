@@ -104,31 +104,44 @@ function Contact() {
                 gap: 2
                 }}
               >    
-                <CopyToClipboard text="2532931003" onCopy={handleCopy}>
+                <CopyToClipboard text="2064024029" onCopy={handleCopy}>
                   <Box sx={{ cursor: 'pointer', textAlign: 'center' }}>
                     <LocalPhoneIcon sx={{ fontSize: "6rem"}}/>
-                    <Typography variant="h5">(253) 293-1003</Typography>
+                    <Typography variant="h5">(206) 402-4029</Typography>
                   </Box>
                 </CopyToClipboard>   
               </Grid>
             </Tooltip>
-            <Tooltip title="Copy Email">
-              <Grid item xs={12} sm={10} md={4}
-                sx={{
-                  display: "flex",
-                  flexDirection: "column",
-                  alignItems: "center",
-                  gap: 2
-                  }}
-              >
+            <Grid item xs={12} sm={10} md={4}
+              sx={{
+                display: "flex",
+                flexDirection: "column",
+                alignItems: "center",
+                gap: 2
+                }}
+            >
+              
+              <Box sx={{ textAlign: 'center' }}>
+                <EmailIcon sx={{ fontSize: "6rem" }}/>
                 <CopyToClipboard text="Chris.KQWZ@weareoneamerica.org" onCopy={handleCopy}>
-                  <Box sx={{ cursor: 'pointer', textAlign: 'center' }}>
-                    <EmailIcon sx={{ fontSize: "6rem" }}/>
-                    <Typography variant="h5">Chris.KQWZ@weareoneamerica.org</Typography>
-                  </Box>
+                  <Tooltip title="Copy Email">
+                    <Typography variant="h5"  sx={{ cursor: "pointer" }}>Chris.KQWZ@weareoneamerica.org</Typography>
+                  </Tooltip>
                 </CopyToClipboard>
-              </Grid>
-            </Tooltip>
+                or
+                <CopyToClipboard text="director@highlinemuseum.org" onCopy={handleCopy}>
+                  <Tooltip title="Copy Email">
+                    <Typography variant="h5" sx={{ cursor: "pointer" }}>director@highlinemuseum.org</Typography>
+                  </Tooltip>
+                </CopyToClipboard>
+                or
+                <CopyToClipboard text="Magaly@weareoneamerica.org" onCopy={handleCopy}>
+                  <Tooltip title="Copy Email">
+                    <Typography variant="h5"  sx={{ cursor: "pointer" }}>Magaly@weareoneamerica.org</Typography>
+                  </Tooltip>
+                </CopyToClipboard>
+              </Box>
+            </Grid>
             <Tooltip title="Copy Adress">
               <Grid item xs={12} s={10} md={4}
                 sx={{
