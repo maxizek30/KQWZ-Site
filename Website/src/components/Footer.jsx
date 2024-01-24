@@ -1,6 +1,9 @@
-import { Container,Box, Grid, Typography, Link } from "@mui/material"
+import { Box, Grid, Typography, Link } from "@mui/material"
+import BusinessIcon from '@mui/icons-material/Business';
 import KqwzLogo from '../assets/KqwzLogo.png'
 import FacebookIcon from '@mui/icons-material/Facebook';
+import LocalPhoneIcon from '@mui/icons-material/LocalPhone';
+import EmailIcon from '@mui/icons-material/Email';
 
 function Footer() {
   return (
@@ -11,70 +14,114 @@ function Footer() {
             color: "white",
             }}
         >
-            <Container>
-                <Grid 
-                    container
-                    justifyContent={"center"}
-                    py={4}
+            <Grid 
+                container
+                justifyContent="space-around"
+                py={4}
+                gap={6}
+            >
+                {/* Logo Section */}
+                <Grid item xs={10} md={3}
+                    sx={{
+                        display: "flex",
+                        flexDirection: "column",
+                        gap: 1,
+                        alignItems: {
+                            xs: "center",
+                            md: "flex-start"
+                        }
+                    }}
                 >
-                    {/* Logo Section */}
-                    <Grid item xs={10} sm={10} md={10} lg={2}
-                        sx={{
-
+                    <Link href='/' sx={{
+                        width: "70%"
                         }}
                     >
-                        <Link href='/'>
-                            <img src={KqwzLogo} alt="KQWZ Logo" style={{ width: "100%" }} />
-                        </Link>
-                    </Grid>
-                    {/* Header Section */}
-                    <Grid Item xs={10} sm={10} md={5} lg={3}
-                        sx={{
-                        textAlign: "center",
+                        <img src={KqwzLogo} alt="KQWZ Logo" style={{ width: "100%" }} />
+                    </Link>
+                    <Box sx={{
+                        display: "flex",
+                        justifyContent: "space-between",
+                        gap: 2
                         }}
-                    >
-                        <Typography variant="h6">
-                        1225 S Weller St Ste 430
-                        <br/>
-                        Seattle, WA, 98144
-                        <br/>
-                        <Link href="tel:206-723-2203" color="primary.dark">(206) 723-2203</Link>
-                        <br/>
-                        <Link href="mailto:test@example.com" color="primary.dark">Chris.KQWZ@weareoneamerica.org</Link>
-                        </Typography>
-                    </Grid>
-                    <Grid Item xs={3} sm={3} md={3} lg={2}
-                        sx={{
-                        textAlign: "center",
-                        }}
-                    >
-                        <Typography variant="h6" color="inherit">Sitemap</Typography>
-                        <Link href="/" color="inherit">Home</Link><br/>
-                        <Link href="/stream" color="inherit">Stream</Link><br/>
-                        <Link href="/about" color="inherit">About</Link><br/>
+                    >  
+                        <Link href="/" color="inherit">Home</Link> |
+                        <Link href="/stream" color="inherit">Stream</Link> |
+                        <Link href="/about" color="inherit">About</Link> |
                         <Link href="/contact" color="inherit">Contact</Link>
-                    </Grid>
-                     {/* Facebook Link */}
-                     <Grid Item xs={3} sm={3} md={3} lg={2}
-                        sx={{
-                        textAlign: "center",
-                        }}
-                    >
-                        <Typography variant="h6" color="inherit">Follow Us</Typography>
-                        <Link href="https://www.facebook.com/profile.php?id=61552098129072" color="inherit" target="_blank" sx={{display: "flex", justifyContent: "center"}}>
-                            <FacebookIcon /> Facebook
-                        </Link>
-                    </Grid>
-                    {/* Copyright Notice */}
-                    <Grid Item xs={10} sm={3} md={3} lg={2}
-                        sx={{
-                        textAlign: "center",
-                        }}
-                    >
-                        <Typography variant="h6" color="inherit">© {new Date().getFullYear()} One America Voice</Typography>
-                    </Grid>
+                    </Box>
+                    <Typography variant="h6" color="inherit">OneAmerica Voice © {new Date().getFullYear()}</Typography>
                 </Grid>
-            </Container>
+                {/* info Section */}
+                <Grid Item xs={10} md={"auto"}
+                    sx={{
+                    display: "flex",
+                    flexDirection: "column",
+                    justifyContent: "space-between",
+                    alignItems: {
+                        xs: "center",
+                        md: "flex-start"
+                    }
+                    }}
+                >
+                    <Box sx={{
+                        display: "flex",
+                        alignItems: "center",
+                        gap: 2
+                        }}
+                    >
+                        <BusinessIcon />
+                        <Typography variant="h6">
+                            1225 S Weller St Ste 430<br />
+                            Seattle, WA, 98144
+                        </Typography>
+                    </Box>
+                    <Link href="tel:206-723-2203">
+                        <Box sx={{
+                            display: "flex",
+                            alignItems: "center",
+                            gap: 2
+                            }}
+                        >
+                            <LocalPhoneIcon />
+                            <Typography variant="h6">(206) 723-2203</Typography>
+                        </Box>
+                    </Link>
+                    <Link href="mailto:test@example.com">
+                        <Box sx={{
+                            display: "flex",
+                            alignItems: "center",
+                            gap: 2
+                            }}
+                        >
+                            <EmailIcon />
+                            <Typography variant="h6">Chris.KQWZ@weareoneamerica.org</Typography>
+                        </Box>
+                    </Link>
+                </Grid>
+                
+                {/* About Section */}
+                <Grid Item xs={10} md={3}
+                    sx={{
+                        display: "flex",
+                        flexDirection: "column",
+                        gap: 1,
+                        alignItems: {
+                            xs: "center",
+                            md: "flex-start"
+                        },
+                        textAlign: {
+                            xs: "center",
+                            md: "left"
+                        }
+                    }}
+                >
+
+                    <Typography variant="h6" color="inherit">A low Power signal that magnifies the voices in the community</Typography>
+                    <Link href="https://www.facebook.com/profile.php?id=61552098129072" color="inherit" target="_blank">
+                        <FacebookIcon fontSize="large"/>
+                    </Link>
+                </Grid>                
+            </Grid>
         </Box>
     </>
   )

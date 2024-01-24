@@ -94,6 +94,8 @@ function Contact() {
             direction="row"
             justifyContent="space-between"
             alignItems="center"
+            rowSpacing={4}
+
           >
             <Tooltip title="Copy Phone Number">
               <Grid item xs={12} s={10} md={4} 
