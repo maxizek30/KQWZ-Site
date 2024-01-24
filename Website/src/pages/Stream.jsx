@@ -1,6 +1,8 @@
 import { Box, Container, Grid, Typography } from "@mui/material"
+import { Masonry } from "@mui/lab";
 import HeadphoneImage from '../assets/headphones.jpg';
 import RadioPlayer from "../components/RadioPlayer";
+
 
 function Stream() {
   return (
@@ -35,6 +37,15 @@ function Stream() {
         }}
       >
         <RadioPlayer />  
+      </Box>
+      {/* Flyer Section */}
+      <Box sx={{
+        py: 6
+        }}
+      >
+        <Masonry columns={3} spacing={2}>
+
+        </Masonry>
       </Box>
     </>
   )
