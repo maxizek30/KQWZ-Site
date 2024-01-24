@@ -1,7 +1,9 @@
-import { Box, Container, Grid, Typography } from "@mui/material"
-import { Masonry } from "@mui/lab";
+import { Box, Container, Grid, ImageList, ImageListItem, Typography } from "@mui/material"
 import HeadphoneImage from '../assets/headphones.jpg';
 import RadioPlayer from "../components/RadioPlayer";
+import flyers from "../flyers.js"
+
+
 
 
 function Stream() {
@@ -40,12 +42,17 @@ function Stream() {
       </Box>
       {/* Flyer Section */}
       <Box sx={{
-        py: 6
-        }}
-      >
-        <Masonry columns={3} spacing={2}>
-
-        </Masonry>
+        py: 6,
+      }}>
+        <ImageList cols={3}>
+          {flyers.map((item) => (
+            <ImageListItem key={(item.location)}>
+              <img 
+                src={item.location}
+              />
+            </ImageListItem>
+          ))}
+        </ImageList>
       </Box>
     </>
   )

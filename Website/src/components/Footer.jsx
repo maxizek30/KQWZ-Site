@@ -33,7 +33,7 @@ function Footer() {
                     }}
                 >
                     <Link href='/' sx={{
-                        width: "70%"
+                        width: "70%",
                         }}
                     >
                         <img src={KqwzLogo} alt="KQWZ Logo" style={{ width: "100%" }} />
@@ -75,7 +75,7 @@ function Footer() {
                             Seattle, WA, 98144
                         </Typography>
                     </Box>
-                    <Link href="tel:206-723-2203">
+                    <Link href="tel:206-723-2203" sx={{textDecoration: "none", color: "white"}}>
                         <Box sx={{
                             display: "flex",
                             alignItems: "center",
@@ -86,7 +86,7 @@ function Footer() {
                             <Typography variant="h6">(206) 723-2203</Typography>
                         </Box>
                     </Link>
-                    <Link href="mailto:test@example.com">
+                    <Link href="mailto:test@example.com" sx={{textDecoration: "none", color: "white"}}>
                         <Box sx={{
                             display: "flex",
                             alignItems: "center",
