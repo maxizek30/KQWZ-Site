@@ -12,11 +12,11 @@ function Home() {
         backgroundImage: `url(${MicImage})`,
         backgroundSize: 'cover',
         backgroundPosition: 'center',
-        height: '80vh', // Full viewport height
-        width: '100%', // Full width
-        display: 'flex', // Use flexbox
-        alignItems: 'center', // Center vertically
-        justifyContent: 'center', // Center horizontally
+        height: '80vh', 
+        width: '100%', 
+        display: 'flex',
+        alignItems: 'center', 
+        justifyContent: 'center', 
       }}
     >
       <Container>

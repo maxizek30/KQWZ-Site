@@ -9,7 +9,7 @@ import AboutImage from "../assets/StudioDroneShot.jpg"
 function About() {
   return (
     <>
-      {/* Header Section */}
+      {/* Hero Section */}
       <Box sx={{
           backgroundImage: `url(${AboutImage})`,
           backgroundSize: 'cover',
@@ -62,7 +62,7 @@ function About() {
           </Grid>
         </Container>
       </Box>
-      {/* Partnership */}
+      {/* Partnership Section */}
       <Container>
         <Grid container
         direction="row-reverse"
@@ -99,7 +99,7 @@ function About() {
           </Grid>
         </Grid>
       </Container>
-      {/* Our Programs */}
+      {/* Our Programs Section */}
       <Box sx={{
         width: "100%",
         bgcolor: "secondary.main"
@@ -129,7 +129,7 @@ function About() {
           </Paper>
         </Container>
       </Box>
-      {/* Commitment */}
+      {/* Commitment Section*/}
       <Box sx={{
         width: "100%",
         bgcolor: "tertiary.main"
@@ -162,7 +162,6 @@ function About() {
           </Grid>
         </Container>
       </Box>
-
     </>
   )
 }

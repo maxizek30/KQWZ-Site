@@ -52,7 +52,7 @@ function Footer() {
                     <Typography variant="h6" color="inherit">OneAmerica Voice © {new Date().getFullYear()}</Typography>
                 </Grid>
                 {/* info Section */}
-                <Grid Item xs={10} md={"auto"}
+                <Grid item xs={10} md={"auto"}
                     sx={{
                     display: "flex",
                     flexDirection: "column",
@@ -100,7 +100,7 @@ function Footer() {
                 </Grid>
                 
                 {/* About Section */}
-                <Grid Item xs={10} md={3}
+                <Grid item xs={10} md={3}
                     sx={{
                         display: "flex",
                         flexDirection: "column",

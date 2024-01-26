@@ -24,7 +24,7 @@ function Navbar() {2
   ];
 
   //color
-  const location = useLocation(); // Hook to get the current location
+  const location = useLocation(); 
   const isActive = (path) => location.pathname === path;
 
   //drawer  
@@ -70,7 +70,7 @@ function Navbar() {2
                 '&:hover': {
                   backgroundColor: 'transparent'
                 },
-                color: isActive(link.path) ? 'secondary.main' : 'primary.main' // Change color if active
+                color: isActive(link.path) ? 'secondary.main' : 'primary.main' 
               }}>
               {link.title}
             </Button>

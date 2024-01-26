@@ -27,19 +27,19 @@ function Contact() {
       autoHideDuration={2000}
       onClose={handleClose}
       message="Copied!"
-      anchorOrigin={{ vertical: 'bottom', horizontal: 'left' }} // Position of the Snackbar
+      anchorOrigin={{ vertical: 'bottom', horizontal: 'left' }} 
     />
-    {/* Header Section */}
+    {/* Hero Section */}
     <Box sx={{
       backgroundSize: 'cover',
       backgroundPosition: 'center',
       backgroundColor: 'grey',
       backgroundImage: `url(${ContactImage})`,
       height: "40vh",
-      width: '100%', // Full width
-      display: 'flex', // Use flexbox
-      alignItems: 'center', // Center vertically
-      justifyContent: 'center', // Center horizontally
+      width: '100%', 
+      display: 'flex', 
+      alignItems: 'center', 
+      justifyContent: 'center', 
       }}
     >
       <Container>
@@ -72,7 +72,7 @@ function Contact() {
         <ContactForm />
       </Container>
     </Box>
-    {/* Infromation Section */}
+    {/* Information Section */}
     <Box sx={{
       backgroundColor: "tertiary.main",
       color: "white",
@@ -122,7 +122,6 @@ function Contact() {
                 gap: 2
                 }}
             >
-              
               <Box sx={{ textAlign: 'center' }}>
                 <EmailIcon sx={{ fontSize: "6rem" }}/>
                 <CopyToClipboard text="Chris.KQWZ@weareoneamerica.org" onCopy={handleCopy}>

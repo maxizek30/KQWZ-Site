@@ -18,7 +18,7 @@ function Stream() {
   
   return (
     <>
-      {/* Header Section */}
+      {/* Hero Section */}
       <Box sx={{
         backgroundImage: `url(${HeadphoneImage})`,
         backgroundSize: 'cover',
@@ -65,6 +65,8 @@ function Stream() {
             <ImageListItem key={(item.location)} onClick={() => handleOpen(item.location)} sx={{cursor: "pointer"}}>
               <img 
                 src={item.location}
+                alt={item.alt}
+                loading="lazy"
               />
             </ImageListItem>
           ))}
