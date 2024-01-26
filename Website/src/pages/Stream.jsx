@@ -2,6 +2,7 @@ import { Box, Container, Grid, ImageList, ImageListItem, Typography } from "@mui
 import HeadphoneImage from '../assets/headphones.jpg';
 import RadioPlayer from "../components/RadioPlayer";
 import flyers from "../flyers.js"
+import { red } from "@mui/material/colors";
 
 function Stream() {
   return (
@@ -39,8 +40,14 @@ function Stream() {
       </Box>
       {/* Flyer Section */}
       <Box py={{ xs: 2, sm: 4, md: 10, lg: 20 }}>
-        <Typography variant="h1" color="secondary">Flyers</Typography>
-        <ImageList cols={4} gap={12}>
+        <Typography variant="h2" color="secondary" py={4} textAlign={"center"}>Flyers</Typography>
+        <ImageList 
+        gap={12}
+        sx={{
+          gridTemplateColumns: 
+          `repeat(auto-fill, minmax(280px, 1fr))!important`
+          }}
+        >
           {flyers.map((item) => (
             <ImageListItem key={(item.location)}>
               <img 
