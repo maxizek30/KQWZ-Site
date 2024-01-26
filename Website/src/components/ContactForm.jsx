@@ -1,18 +1,12 @@
 import { TextField, Button, Box, Grid, Typography, Paper } from '@mui/material';
 
 function ContactForm() {
-  const handleSubmit = (event) => {
-    event.preventDefault();
-    // Handle the form submission logic here
-  };
-
   return (
     <Paper sx={{
         padding: 2 
     }}>
         <Box
         component="form"
-        onSubmit={handleSubmit}
         noValidate
         sx={{ mt: 3 }}
         textAlign={"left"}
