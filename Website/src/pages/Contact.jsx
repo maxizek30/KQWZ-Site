@@ -1,6 +1,5 @@
 import { useState } from "react";
-import { Box, Container, Grid, Typography, Snackbar, Tooltip} from "@mui/material"
-import ContactForm from "../components/ContactForm"
+import { Box, Container, Grid, Typography, Snackbar, Tooltip, Button, Paper, TextField} from "@mui/material"
 import ContactImage from "../assets/ContactUs.jpg"
 import EmailIcon from '@mui/icons-material/Email';
 import LocalPhoneIcon from '@mui/icons-material/LocalPhone';
@@ -69,7 +68,71 @@ function Contact() {
           <Typography variant="h2" color="white">Contact From</Typography>
           <Typography variant="h5" color="white"> Feel free to use the form below to send us a message directly:</Typography>
         </Box>
-        <ContactForm />
+          <Paper sx={{
+            padding: 2 
+          }}>
+            <Box
+            sx={{ mt: 3 }}
+            textAlign={"left"}
+            >
+                <Typography variant="h6">Contact Us</Typography>
+                <form 
+                    name="contact" 
+                    method="POST" 
+                    
+                    data-netlify="true"
+                >
+                    <input type="hidden" name="form-name" value="contact" />
+                    <Grid container spacing={2}>
+                        <Grid item xs={12} sm={6}>
+                        <TextField
+                            required
+                            fullWidth
+                            label="First Name"
+                            name="firstName"
+                            autoComplete="given-name"
+                        />
+                        </Grid>
+                        <Grid item xs={12} sm={6}>
+                        <TextField
+                            required
+                            fullWidth
+                            label="Last Name"
+                            name="lastName"
+                            autoComplete="family-name"
+                        />
+                        </Grid>
+                        <Grid item xs={12}>
+                        <TextField
+                            required
+                            fullWidth
+                            label="Email Address"
+                            name="email"
+                            autoComplete="email"
+                        />
+                        </Grid>
+                        <Grid item xs={12}>
+                        <TextField
+                            required
+                            fullWidth
+                            label="Message"
+                            name="message"
+                            multiline
+                            rows={4}
+                        />
+                        </Grid>
+                    </Grid>
+                    <Button
+                        type="submit"
+                        fullWidth
+                        variant="contained"
+                        sx={{ mt: 3, mb: 2 }}
+                    >
+                        Send
+                    </Button>
+                </form>
+            </Box>
+        </Paper>
       </Container>
     </Box>
     {/* Information Section */}
