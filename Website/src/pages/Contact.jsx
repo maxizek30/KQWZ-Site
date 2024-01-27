@@ -50,8 +50,7 @@ function Contact() {
       }}
     >
       <Container>
-        <Grid container spacing={2}
->
+        <Grid container spacing={2}>
           <Grid item xs={12} sm={8} md={6} sx={{display: "flex", flexDirection: "column", gap: 1}}>
             <Typography variant="h1" gutterBottom color="white">Contact Us!</Typography>
           </Grid>
@@ -92,6 +91,7 @@ function Contact() {
                     method="POST" 
                     action="https://kqwzradio.org//contact/?success=true" 
                     data-netlify="true"
+                    netlify
                 >
                     <input type="hidden" name="form-name" value="contact" />
                     <Grid container spacing={2}>
