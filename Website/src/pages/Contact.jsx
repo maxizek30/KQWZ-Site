@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Box, Container, Grid, Typography, Snackbar, Tooltip, Button, Paper, TextField} from "@mui/material"
 import ContactImage from "../assets/ContactUs.jpg"
 import EmailIcon from '@mui/icons-material/Email';
@@ -7,6 +7,14 @@ import BusinessIcon from '@mui/icons-material/Business';
 import { CopyToClipboard } from 'react-copy-to-clipboard';
 
 function Contact() {
+  const [success, setSuccess] = useState(false);
+
+  useEffect(() => {
+    if ( window.location.search.includes('success=true') ) {
+      setSuccess(true);
+    }
+  }, []);
+
   const [open, setOpen] = useState(false);
   const handleCopy = () => {
     setOpen(true);
@@ -76,10 +84,13 @@ function Contact() {
             textAlign={"left"}
             >
                 <Typography variant="h6">Contact Us</Typography>
+                {success && (
+                  <p style={{ color: "green" }}>Thanks for your message! </p>
+                )}
                 <form 
                     name="contact" 
                     method="POST" 
-                    
+                    action="https://kqwzradio.org//contact/?success=true" 
                     data-netlify="true"
                 >
                     <input type="hidden" name="form-name" value="contact" />
