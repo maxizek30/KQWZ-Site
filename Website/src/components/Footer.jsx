@@ -2,6 +2,7 @@ import { Box, Grid, Typography, Link } from "@mui/material"
 import BusinessIcon from '@mui/icons-material/Business';
 import KqwzLogo from '../assets/KqwzLogo.png'
 import FacebookIcon from '@mui/icons-material/Facebook';
+import YouTubeIcon from '@mui/icons-material/YouTube';
 import LocalPhoneIcon from '@mui/icons-material/LocalPhone';
 import EmailIcon from '@mui/icons-material/Email';
 
@@ -117,9 +118,18 @@ function Footer() {
                 >
 
                     <Typography variant="h6" color="inherit">A low Power signal that magnifies the voices in the community</Typography>
-                    <Link href="https://www.facebook.com/profile.php?id=61552098129072" color="inherit" target="_blank">
-                        <FacebookIcon fontSize="large"/>
-                    </Link>
+                    <Box sx={{
+                        display:"flex",
+                        gap: 2
+                        }}
+                    >
+                        <Link href="https://www.facebook.com/profile.php?id=61552098129072" color="inherit" target="_blank">
+                            <FacebookIcon fontSize="large"/>
+                        </Link>
+                        <Link href="https://www.youtube.com/@highlineheritagemuseum3186" color="inherit" target="_blank">
+                            <YouTubeIcon fontSize="large"/>
+                        </Link>
+                    </Box>
                 </Grid>                
             </Grid>
         </Box>
