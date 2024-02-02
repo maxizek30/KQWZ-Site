@@ -3,6 +3,7 @@ import { Box, Container, Grid, ImageList, ImageListItem, Typography, Modal } fro
 import HeadphoneImage from '../assets/headphones.jpg';
 import RadioPlayer from "../components/RadioPlayer";
 import flyers from "../flyers.js"
+import ImageGallery from "../components/ImageGallery.jsx";
 
 function Stream() {
   const [open, setOpen] = useState(false);
@@ -49,52 +50,7 @@ function Stream() {
       >
         <RadioPlayer />  
       </Box>
-      
-      {/* Flyer Section */}
-      <Container>
-      <Box py={{ xs: 2, sm: 4, md: 10, lg: 20 }}>
-        <Typography variant="h2" py={4} textAlign={"center"} sx={{color: "tertiary.main"}}>Flyers</Typography>
-        <ImageList 
-        gap={12}
-        sx={{
-          gridTemplateColumns: 
-          `repeat(auto-fill, minmax(280px, 1fr))!important`
-          }}
-        >
-          {flyers.map((item) => (
-            <ImageListItem key={(item.location)} onClick={() => handleOpen(item.location)} sx={{cursor: "pointer"}}>
-              <img 
-                src={item.location}
-                alt={item.alt}
-                loading="lazy"
-              />
-            </ImageListItem>
-          ))}
-        </ImageList>
-      </Box>
-      </Container>
-      {/* Image Modal */}
-      <Modal
-        open={open}
-        onClose={handleClose}
-        aria-labelledby="modal-modal-title"
-        aria-describedby="modal-modal-description"
-      >
-        <Box sx={{
-          position: 'absolute',
-          top: '50%',
-          left: '50%',
-          transform: 'translate(-50%, -50%)',
-          boxShadow: 24,
-          outline: 'none',
-          maxWidth: '90%',
-          maxHeight: '90%',
-          overflow: 'auto'
-          }}
-        >
-          <img src={SelectedImg} style={{width: "100%"}} />
-        </Box>
-      </Modal>
+      <ImageGallery title="Our Content" images={flyers} />
     </>
   )
 }
