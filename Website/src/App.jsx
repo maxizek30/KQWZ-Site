@@ -4,6 +4,7 @@ import Home from './pages/Home'
 import Contact from './pages/Contact'
 import Stream from './pages/Stream'
 import Navbar from './components/Navbar'
+import PageNotFound from './pages/PageNotFound'
 import theme from './theme'
 import Footer from './components/Footer'
 import { ThemeProvider } from '@emotion/react'
@@ -34,6 +35,7 @@ function App() {
             <Route path="/stream" element={<Stream />} />
             <Route path="/about" element={<About />} />
             <Route path="/contact" element={<Contact />} />
+            <Route path="*" element={<PageNotFound />} />
           </Routes>
           <Footer />
         </Router>
