@@ -1,9 +1,9 @@
 import { useState } from "react";
-import { Box, Container, Grid, ImageList, ImageListItem, Typography, Modal } from "@mui/material"
+import { Box, Container, Grid, Typography } from "@mui/material"
 import HeadphoneImage from '../assets/headphones.jpg';
 import RadioPlayer from "../components/RadioPlayer";
 import flyers from "../flyers.js"
-import ImageGallery from "../components/ImageGallery.jsx";
+import Marquee from "react-fast-marquee";
 
 function Stream() {
   const [open, setOpen] = useState(false);
@@ -25,10 +25,10 @@ function Stream() {
         backgroundSize: 'cover',
         backgroundPosition: 'center',
         height: "40vh",
-        width: '100%', // Full width
-        display: 'flex', // Use flexbox
-        alignItems: 'center', // Center vertically
-        justifyContent: 'center', // Center horizontally
+        width: '100%', 
+        display: 'flex', 
+        alignItems: 'center', 
+        justifyContent: 'center', 
         }}
       >
         <Container>
@@ -50,7 +50,38 @@ function Stream() {
       >
         <RadioPlayer />  
       </Box>
-      <ImageGallery title="Our Content" images={flyers} />
+      {/* Marquee Section */}
+      <Box sx={{
+        py: 6,
+        position: "relative",
+        display: "flex",
+        flexDirection: "column",
+        alignItems: "center",
+        bgcolor: "secondary.main",
+        overflow: "hidden",
+        gap: 2,
+      }}>
+        <Typography variant="h1" color={"tertiary.main"} sx={{ textAlign: "center" }}>Our Content</Typography>
+        <Marquee style={{width: "90%"}} speed={30}>
+          {flyers.map((item, index) => (
+            <Box key={index} sx={{
+              marginLeft: '10px', 
+              marginRight: '10px', 
+              }}
+            >
+              <img
+                src={item.location}
+                alt={item.alt}
+                style={{
+                  height: "40vh",
+                  width: "auto", 
+                }}
+                loading="lazy"
+              />
+            </Box>
+          ))}
+        </Marquee>
+    </Box>
     </>
   )
 }
