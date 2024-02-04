@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Box, Container, Grid, Typography } from "@mui/material"
+import { Box, Container, Grid, Typography, Modal } from "@mui/material"
 import HeadphoneImage from '../assets/headphones.jpg';
 import RadioPlayer from "../components/RadioPlayer";
 import flyers from "../flyers.js"
@@ -75,13 +75,47 @@ function Stream() {
                 style={{
                   height: "40vh",
                   width: "auto", 
+                  cursor: "pointer"
                 }}
+                onClick={() => handleOpen(item.location)}
                 loading="lazy"
               />
             </Box>
           ))}
         </Marquee>
+       
     </Box>
+     {/* Image Modal */}
+     <Modal
+        open={open}
+        onClose={handleClose}
+        aria-labelledby="modal-modal-title"
+        aria-describedby="modal-modal-description"
+      >
+        <Box sx={{
+            position: 'absolute',
+            top: '50%',
+            left: '50%',
+            transform: 'translate(-50%, -50%)',
+            width: '80%', 
+            maxWidth: '600px', 
+            overflow: 'hidden',
+            display: 'flex', 
+            flexDirection: 'column', 
+            alignItems: 'center', 
+            justifyContent: 'center',
+          }}
+        >
+          <img 
+            src={SelectedImg} 
+            style={{
+              width: "100%",
+              height: 'auto',
+              display: 'block'
+            }} 
+          />
+        </Box>
+      </Modal>
     </>
   )
 }
