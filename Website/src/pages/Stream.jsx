@@ -51,7 +51,9 @@ function Stream() {
         <RadioPlayer />  
       </Box>
       {/* Marquee Section */}
-      <Box sx={{
+      <Box 
+        py={{ xs: 2, sm: 4, md: 10, lg: 24 }}
+        sx={{
         py: 6,
         position: "relative",
         display: "flex",
@@ -61,7 +63,7 @@ function Stream() {
         overflow: "hidden",
         gap: 2,
       }}>
-        <Typography variant="h1" color={"tertiary.main"} sx={{ textAlign: "center" }}>Our Content</Typography>
+        <Typography variant="h1" color={"white"} sx={{ textAlign: "center" }}>Our Content</Typography>
         <Marquee style={{width: "90%"}} speed={30}>
           {flyers.map((item, index) => (
             <Box key={index} sx={{
