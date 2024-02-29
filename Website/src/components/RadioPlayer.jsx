@@ -3,7 +3,7 @@ import '../styles/RadioPlayer.css';
 
 function RadioPlayer() {
     const [isPlaying, setIsPlaying] = useState(false);
-    const audioRef = useRef(new Audio("https://stream.kqwzradio.org/kqwz.opus"));
+    const audioRef = useRef(new Audio("https://stream.kqwzradio.org/kqwz.mp3"));
     const musicNotesRef = useRef(null);
 
     const togglePlay = () => {
