@@ -8,51 +8,48 @@ const theme = createTheme({
     ].join(','),
     h1: {
       fontWeight: 900,
-      fontSize: '3rem', // Default
       '@media (max-width:600px)': {
-        fontSize: '2rem', // Small screens
+        fontSize: '3.5rem', // Small screens
       },
       '@media (min-width:600px)': {
-        fontSize: '2.5rem', // Medium screens
+        fontSize: '3.7rem', // Medium screens
       },
       '@media (min-width:900px)': {
-        fontSize: '3rem', // Large screens
+        fontSize: '4rem', // Large screens
+      },
+      '@media (min-width:1200px)': {
+        fontSize: '4.2rem', // Extra large screens
+      },
+    },
+    h2: {
+      fontWeight: 900,
+      '@media (max-width:600px)': {
+        fontSize: '3rem', // Small screens
+      },
+      '@media (min-width:600px)': {
+        fontSize: '3.2rem', // Medium screens
+      },
+      '@media (min-width:900px)': {
+        fontSize: '3.7rem', // Large screens
       },
       '@media (min-width:1200px)': {
         fontSize: '4rem', // Extra large screens
       },
     },
-    h2: {
-      fontWeight: 900,
-      fontSize: '2.5rem', // Large screens (1280px)
-      '@media (max-width:600px)': {
-        fontSize: '2rem', // Extra Small screens (less than 600px)
-      },
-      '@media (min-width:600px)': {
-        fontSize: '2.5rem', // Medium screens (900px)
-      },
-      '@media (min-width:900px)': {
-        fontSize: '3.7rem', // Large screens (1200px and above)
-      },
-    },
     h5: {
       fontWeight: 400,
-      // Default font size
-      fontSize: '1.5rem',
-      // Responsive breakpoints
-      '@media (max-width:600px)': { // xs: small screens
-        fontSize: '1rem',
-      },
-      '@media (min-width:600px)': { // sm: medium screens
-        fontSize: '1.2rem',
-      },
-      '@media (min-width:900px)': { // md: large screens
+      '@media (max-width:600px)': { // Small screens
         fontSize: '1.4rem',
       },
-      '@media (min-width:1200px)': { // lg: larger screens
-        fontSize: '1.5rem',
+      '@media (min-width:600px)': { // Medium screens
+        fontSize: '1.6rem',
       },
-      // Add more breakpoints if needed
+      '@media (min-width:900px)': { // Large screens
+        fontSize: '1.6rem',
+      },
+      '@media (min-width:1200px)': { // Extra large screens
+        fontSize: '1.8rem',
+      },
     },
     h6: {
       fontWeight: 200,

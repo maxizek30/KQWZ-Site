@@ -12,7 +12,7 @@ function Home() {
         backgroundImage: `url(${MicImage})`,
         backgroundSize: 'cover',
         backgroundPosition: 'center',
-        height: '80vh', 
+        height: { xs: "100vh", sm: "80vh"},
         width: '100%', 
         display: 'flex',
         alignItems: 'center', 
@@ -21,7 +21,7 @@ function Home() {
     >
       <Container>
         <Grid container spacing={2}>
-          <Grid item xs={12} sm={8} md={6} sx={{display: "flex", flexDirection: "column", gap: 1}}>
+          <Grid item xs={12} sm={8} md={7} sx={{display: "flex", flexDirection: "column", gap: 1}}>
             <Typography variant="h1" gutterBottom color="white">
               A low Power signal that magnifies the voices in the community
             </Typography>

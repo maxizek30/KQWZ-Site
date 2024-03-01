@@ -33,11 +33,10 @@ function Stream() {
       >
         <Container>
           <Grid container spacing={2}>
-            <Grid item xs={12} sm={8} md={6} sx={{display: "flex", flexDirection: "column", gap: 1}}>
+            <Grid item xs={12} sm={8} md={6}>
               <Typography variant="h1" gutterBottom color="white">
                 Listen!
               </Typography>
-              <Typography variant="h5" color="white">Tune in to OneAmerica Voice - KQWZ and experience a world of stories, music, and conversations that celebrate our rich cultural tapestry."</Typography>
             </Grid>
           </Grid>
         </Container>
