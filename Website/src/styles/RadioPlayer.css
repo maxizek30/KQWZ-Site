@@ -1,6 +1,5 @@
  /* For mobile phones: */
- .radioContainer {
-    width: 90%;
+.radioContainer {
     height: 400px;
     display: flex;
     flex-direction: column;
@@ -134,9 +133,24 @@
 .doubleNote {
     transform: rotate(12deg);
 }
-
-@media only screen and (min-width: 520px) {
+@media screen and (min-width: 0px) {
+     .radioContainer {
+         width: 80%;
+     }
+ }
+@media screen and (min-width: 600px) {
+    .radioContainer {
+        width: 40%;
+    }
+}
+@media screen and (min-width: 900px) {
+    .radioContainer {
+        width: 25%;
+    }
+}
+@media screen and (min-width: 1536px) {
     .radioContainer {
         width: 20%;
     }
 }
+
