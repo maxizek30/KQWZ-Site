@@ -58,11 +58,11 @@ function Contact() {
       </Container>
     </Box>
     {/* ContactForm Section */}
-    <Box 
-    py={{ xs: 2, sm: 4, md: 10, lg: 20 }}
-    sx={{
-      backgroundColor: "secondary.main",
-      }}
+    <Box
+        py={{ xs: 8, sm: 10, md: 16, lg: 24 }}
+        sx={{
+          backgroundColor: "secondary.main",
+          }}
     >
       <Container sx={{
         textAlign: 'center',
@@ -154,15 +154,15 @@ function Contact() {
     >
       <Container>
         <Box
-          py={{ xs: 2, sm: 4, md: 10, lg: 24 }}
-          sx={{
+            py={{ xs: 8, sm: 10, md: 16, lg: 24 }}
+            sx={{
             display: "flex",
             flexDirection: "column",
             alignItems: 'center',
             gap: 6
-          }}
+            }}
         >
-          <Typography variant="h2">Direct Contact Information</Typography>
+          <Typography variant="h2" sx={{textAlign: "center"}}>Direct Contact Information</Typography>
           <Grid 
             container
             direction="row"

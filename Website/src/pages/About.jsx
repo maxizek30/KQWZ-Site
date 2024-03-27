@@ -37,7 +37,7 @@ function About() {
       >
         <Container>
           <Grid container
-          py={{ xs: 2, sm: 4, md: 10, lg: 24 }}
+          py={{ xs: 8, sm: 10, md: 16, lg: 24 }}
           direction="row"
           gap={2}
           justifyContent="space-between"
@@ -57,7 +57,7 @@ function About() {
               </Typography>
             </Grid>
             <Grid item xs={12} s={10} md={7}>
-              <img src={StudioImage} alt="Description" style={{ width: '100%', height: '100%' }} />
+              <img src={StudioImage} alt="Description" style={{ width: '100%', height: '100%',  }} />
             </Grid>
           </Grid>
         </Container>
@@ -68,7 +68,7 @@ function About() {
         direction="row-reverse"
         gap={2}
         justifyContent="space-between"
-        py={{ xs: 2, sm: 4, md: 10, lg: 20 }}
+        py={{ xs: 8, sm: 10, md: 16, lg: 24 }}
         >
           <Grid item xs={12} s={10} md={4}
             sx={{
@@ -106,7 +106,7 @@ function About() {
         }}
       >
         <Container sx={{
-          py: { xs: 2, sm: 4, md: 10, lg: 24 }
+          py: { xs: 8, sm: 10, md: 16, lg: 24 }
         }}
         >
           <Paper
@@ -137,7 +137,7 @@ function About() {
       >
         <Container>
           <Grid container
-          py={{ xs: 2, sm: 4, md: 10, lg: 24 }}
+          py={{ xs: 8, sm: 10, md: 16, lg: 24 }}
           direction="row"
           gap={2}
           justifyContent="space-between"

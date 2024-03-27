@@ -49,7 +49,7 @@ function Home() {
     >
       <Container>
         <Grid container
-          py={{ xs: 2, sm: 4, md: 10, lg: 24 }}
+          py={{ xs: 8, sm: 10, md: 16, lg: 24 }}
           direction={"row-reverse"}
           sx={{
             justifyContent: "space-between",
@@ -83,7 +83,7 @@ function Home() {
     >
       <Container>
         <Grid container
-        py={{ xs: 2, sm: 4, md: 10, lg: 24 }}
+        py={{ xs: 8, sm: 10, md: 16, lg: 24 }}
         sx={{
           justifyContent: "space-between",
           direction: "row",
