@@ -1,27 +1,28 @@
 //images
 
-import Radio from "./assets/flyers/HHM - RADIO .png";
-import Amiga from "./assets/flyers/HHM - RADIO Amiga DQTQ Soon.png";
-import Espanol from "./assets/flyers/HHM - RADIO en Espanish.png";
 import OHV from "./assets/flyers/HHM - RADIO OHV 2024.png";
-import Programs from "./assets/flyers/HHM - RADIO Programs .png";
+import Times_History from "./assets/flyers/HHM - Times and History.png";
+import Our_Voices from "./assets/flyers/HMM - Our Voices.jpg"
+import TOS from "./assets/flyers/HHM - TOS.png"
+import Safer_Sound from "./assets/flyers/HMM - Safer Sound.png"
+
 
 const imageData = [
-  { location: Radio, altText: "flyer" },
+  { location: OHV, altText: "flyer" },
   {
-    location: Amiga,
+    location: Times_History,
     altText: "flyer",
   },
   {
-    location: Espanol,
+    location: Our_Voices,
     altText: "flyer",
   },
   {
-    location: OHV,
+    location: Safer_Sound,
     altText: "flyer",
   },
   {
-    location: Programs,
+    location: TOS,
     altText: "flyer",
   },
 ];
